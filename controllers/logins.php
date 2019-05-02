@@ -29,7 +29,7 @@ class Logins extends Controller
 //            exit;
             if ($password == $pass) {
                 $_SESSION['reg_no'] = $reg_no;
-                echo '<script>window.location.replace("../votting/lis")</script>';
+                echo '<script>window.location.replace("../lis")</script>';
             } else {
 //                echo"Enter your correct username Password";
 //                echo '<script>window.location.replace("/votting/home")</script>';

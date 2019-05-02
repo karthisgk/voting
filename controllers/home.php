@@ -80,7 +80,7 @@ class Home extends Controller
 //                    print_r($_SESSION['phone']);
 //                    exit;
 
-                    echo '<script>window.location.replace("../votting/otp")</script>';
+                    echo '<script>window.location.replace("../otp")</script>';
                 } else {
 //                echo"Enter your correct username Password";
 //                echo '<script>window.location.replace("/votting/home")</script>';

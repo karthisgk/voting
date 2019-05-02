@@ -23,7 +23,7 @@ $otp=$_POST['otp'];
 //            print_r($otpp);
 //            exit;
          if ($otp == $otpp) {
-             echo '<script>window.location.replace("../votting/vote")</script>';
+             echo '<script>window.location.replace("../vote")</script>';
          } else {
 //                echo"Enter your correct username Password";
 //                echo '<script>window.location.replace("/votting/home")</script>';
