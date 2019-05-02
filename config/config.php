@@ -13,7 +13,7 @@ define('DB_TYPE','mysql'); //DB_TYPE is type of database is only use in PDO Meth
 define('DB_HOST','localhost');
 define('DB_NAME','votting');
 define('DB_USER','root');
-define('DB_PASS','');
+define('DB_PASS','y5kj3XdKjOII');
 
 /*
 define('DB_TYPE','mysql'); //DB_TYPE is type of database is only use in PDO Method(MVC)
