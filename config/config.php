@@ -1,8 +1,8 @@
 <?php
 /***BASE PATH****/
 define('LIBS','libs/'); //define library path
-define('BASE_PATH','http://localhost/votting/'); //define base path
-define('ADMIN_BASE_PATH','http://localhost/votting/admin/');
+define('BASE_PATH','http://13.229.235.159/'); //define base path
+define('ADMIN_BASE_PATH','http://13.229.235.159/admin/');
 
 //define('BASE_PATH','http://www.yessgames.com/'); //define base path
 //define('ADMIN_BASE_PATH','http://www.yessgames.com/admin/');
