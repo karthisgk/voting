@@ -154,7 +154,7 @@
 <script>
 
     $(document).ready(function() {
-        $('#admin_url').attr('href', 'http://13.229.235.159/admin/');
+        $('#admin_url').attr('href', 'http://vote.karthisgk.be/admin/');
     });
 //    $(document).ready(function() {
         $('#reg').submit(function (event) {
