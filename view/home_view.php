@@ -44,7 +44,7 @@
 <div class="navbar">
     <a href="<?php echo BASE_PATH;?>home">Registration</a>
     <a href='<?php echo BASE_PATH;?>nominate'>Nominate</a>
-    <a href='<?php echo ADMIN_BASE_PATH;?>'>Admin</a>
+    <a id="admin_url" href='<?php echo ADMIN_BASE_PATH;?>'>Admin</a>
 </div>
 
 <div class="main">
@@ -152,6 +152,10 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
+
+    $(document).ready(function() {
+        $('#admin_url').attr('href', 'http://13.229.235.159/admin/');
+    });
 //    $(document).ready(function() {
         $('#reg').submit(function (event) {
             event.preventDefault();
