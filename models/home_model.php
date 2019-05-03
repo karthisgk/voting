@@ -37,7 +37,7 @@ class Home_Model extends Model
     {
 //        print_r($data);
 //        exit;
-        $conn = new mysqli('localhost', 'root', '', 'votting');
+        $conn = new mysqli('localhost', 'root', 'y5kj3XdKjOII', 'votting');
         $sql = "select count(reg_no) from student where reg_no=$data[reg_no]";
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
