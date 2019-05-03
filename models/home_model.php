@@ -8,10 +8,36 @@ class Home_Model extends Model
         parent::__construct();
     }
 
+    public function add($conn, $tablename, $inp) {
+        if(!is_array($inp))
+            return 0;
+        $cols = '(';
+        $vals = '(';
+        $k = 1;
+        foreach ($inp as $col => $val) {
+            $cols .= "`$col`";
+            $vals .= "'$val'";
+            if(count($inp) != $k){
+                $cols .= ', ';
+                $vals .= ', ';
+            }
+            $k++;
+        }
+        $cols .= ')';
+        $vals .= ')';
+        $qry = "INSERT INTO $tablename $cols VALUES $vals";
+        $result = $conn->query($qry);
+        if ($result) {
+            return $conn->insert_id;
+        }else
+            return 0;
+    }
+
     public function reg($data)
     {
 //        print_r($data);
 //        exit;
+        $conn = new mysqli('localhost', 'root', '', 'votting');
         $sql = "select count(reg_no) from student where reg_no=$data[reg_no]";
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
@@ -19,9 +45,9 @@ class Home_Model extends Model
 //       print_r($ans);
 //       exit;
         if ($ans[0][0] == 0) {
-            $result = $this->res = $this->db->insert('student', $data);
-            if ($result) {
-                echo "Register Success fully";
+            $result = $this->add($conn, 'student', $data);;
+            if ($result != 0) {
+                echo "Register Success fullys";
             } else {
                 echo "Register Failed";
             }
