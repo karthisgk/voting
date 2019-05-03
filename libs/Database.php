@@ -25,9 +25,6 @@ class Database extends PDO
            {
              $stmt->bindValue(":$key",$value); //bind value
            }
-           echo "<pre>";
-           print_r($stmt->execute());
-           die();
          return $stmt->execute();    //execute the statement
                 
     }
