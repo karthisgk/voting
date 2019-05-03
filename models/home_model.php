@@ -47,7 +47,7 @@ class Home_Model extends Model
         if ($ans[0][0] == 0) {
             $result = $this->add($conn, 'student', $data);;
             if ($result != 0) {
-                echo "Register Success fullys";
+                echo "Register Success fully";
             } else {
                 echo "Register Failed";
             }
